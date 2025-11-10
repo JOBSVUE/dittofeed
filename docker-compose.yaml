@@ -129,7 +129,7 @@ services:
     networks:
       - dittofeed-network
     ports:
-      - 7433:7233
+      - 7233:7233
     volumes:
       - ./packages/backend-lib/temporal-dynamicconfig:/etc/temporal/config/dynamicconfig
       - 
@@ -294,7 +294,7 @@ services:
   clickhouse-server:
     image: clickhouse/clickhouse-server:24.12.6.70-alpine
     ports:
-      - "8183:8123"
+      - "8123:8123"
       - "9000:9000"
       - "9009:9009"
     environment:
@@ -642,7 +642,7 @@ services:
   blob-storage:
     image: minio/minio
     ports:
-      - "9010:9000"
+      - "9000:9000"
       - "9011:9001"
     environment:
       MINIO_ROOT_USER: admin
