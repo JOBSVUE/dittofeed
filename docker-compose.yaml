@@ -303,7 +303,7 @@ services:
       - clickhouse_log:/var/log/clickhouse-server
       - 
         type: bind
-        source: ./config.xml
+        source: config.xml
         target: /etc/clickhouse-server/config.xml
         content:  |
           <yandex>
