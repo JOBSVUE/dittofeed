@@ -134,12 +134,12 @@ services:
         type: bind
         source: dev.yaml
         target: /etc/temporal/config/dynamicconfig/dev.yaml
-        content: 
+        content: |
           limit.maxIDLength:
             - value: 255
               constraints: {}
           system.forceSearchAttributesCacheRefreshOnRead:
-            - value: false
+            - value: true
               constraints: {}
       
   temporal-ui:
