@@ -127,7 +127,7 @@ services:
     networks:
       - dittofeed-network-dev
     ports:
-      - 7233:7233
+      - 7433:7233
     volumes:
       - ./packages/backend-lib/temporal-dynamicconfig:/etc/temporal/config/dynamicconfig
   temporal-ui:
