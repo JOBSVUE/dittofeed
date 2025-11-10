@@ -132,7 +132,7 @@ services:
       - ./packages/backend-lib/temporal-dynamicconfig:/etc/temporal/config/dynamicconfig
       - 
         type: bind
-        source: dev.yaml
+        source: ./dev.yaml
         target: /etc/temporal/config/dynamicconfig/dev.yaml
         content: |
           limit.maxIDLength:
@@ -303,7 +303,7 @@ services:
       - clickhouse_log:/var/log/clickhouse-server
       - 
         type: bind
-        source: config.xml
+        source: ./config.xml
         target: /etc/clickhouse-server/config.xml
         content:  |
           <yandex>
